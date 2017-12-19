@@ -15,11 +15,11 @@ public class SFEPS {
     public SFEPS(JSONObject object) {
         try {
             this.id = object.getInt(EPSHelper.ID);
-            this.parentId = object.getInt(EPSHelper.PARENT_ID);
-            this.sequence = object.getInt(EPSHelper.SEQUENCE);
+            this.dbName = object.getString(EPSHelper.DB_NAME);
             this.name = object.getString(EPSHelper.NAME);
             this.code = object.getString(EPSHelper.CODE);
-            this.dbName = object.getString(EPSHelper.DB_NAME);
+            this.parentId = object.getInt(EPSHelper.PARENT_ID);
+            this.sequence = object.getInt(EPSHelper.SEQUENCE);
         } catch (JSONException e) {
             e.printStackTrace();
         }
